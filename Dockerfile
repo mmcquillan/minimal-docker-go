@@ -1,4 +1,4 @@
 FROM alpine:3.7
-RUN apk update && apk add ca-certificates
+RUN apk add --no-cache ca-certificates
 ADD "./bin/tester" "/"
 ENTRYPOINT ["/tester"]
